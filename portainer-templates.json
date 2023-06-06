@@ -33,6 +33,10 @@
         {
           "bind": "/home/tstark/pods/traefik/acme.json",
           "container": "/acme.json"
+        },
+        {
+          "bind": "/var/run/docker.sock",
+          "container": "/var/run/docker.sock"
         }
       ]
     }

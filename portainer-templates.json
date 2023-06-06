@@ -93,6 +93,12 @@
       "ports": [
         "6379"
       ],
+      "volumes": [
+        {
+          "bind": "/home/tstark/pods/redis/data",
+          "container": "/data"
+        }
+      ],
       "env": [
         {
           "name": "TZ",

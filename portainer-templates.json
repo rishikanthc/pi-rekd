@@ -85,7 +85,7 @@
         "Tools"
       ],
       "description": "Redis",
-      "image": "redis:alpine",
+      "image": "redis:latest",
       "hostname": "redis",
       "name": "redis",
       "restart_policy": "unless-stopped",
@@ -93,18 +93,12 @@
       "type": 1,
       "platform": "linux",
       "ports": [
-        "6379"
+        "6379/tcp"
       ],
       "volumes": [
         {
           "bind": "/home/tstark/pods/redis/data",
           "container": "/data"
-        }
-      ],
-      "env": [
-        {
-          "name": "TZ",
-          "value": "America/Los_Angeles"
         }
       ]
     },

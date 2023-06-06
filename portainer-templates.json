@@ -19,6 +19,7 @@
       ],
       "restart_policy": "always",
       "title": "Traefik",
+      "type": 1,
       "env": [
         {
           "default": "/home/user/pods/traefik/traefik.yml",
@@ -37,24 +38,6 @@
           "description": "The path to acme.json file is stored",
           "label": "ACME_CONFIG",
           "name": "ACME_CONFIG"
-        }
-      ],
-      "volumes": [
-        {
-          "bind": "${STATIC_CONFIG}",
-          "container": "/traefik.yml"
-        },
-        {
-          "bind": "${DYNAMIC_CONFIG_DIR}",
-          "container": "/config"
-        },
-        {
-          "bind": "/var/run/docker.sock",
-          "container": "/var/run/docker.sock"
-        },
-        {
-          "bind": "${ACME_CONFIG}",
-          "container": "/acme.json"
         }
       ]
     }

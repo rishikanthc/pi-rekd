@@ -39,6 +39,20 @@
           "label": "ACME_CONFIG",
           "name": "ACME_CONFIG"
         }
+      ],
+      "volumes": [
+        {
+          "bind": "${STATIC_CONFIG}",
+          "container": "/traefik.yml"
+        },
+        {
+          "bind": "${DYNAMIC_CONFIG_DIR}",
+          "container": "/config"
+        },
+        {
+          "bind": "${ACME_CONFIG}",
+          "container": "/acme.json"
+        }
       ]
     }
   ]

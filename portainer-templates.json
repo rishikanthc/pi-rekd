@@ -49,6 +49,7 @@
       ],
       "description": "Authelia is an authentication provider",
       "image": "docker.io/authelia/authelia:latest",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/authelia.png",
       "hostname": "authelia",
       "restart_policy": "unless-stopped",
       "title": "Authelia",
@@ -96,6 +97,57 @@
         {
           "name": "TZ",
           "value": "America/Los_Angeles"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Authentication",
+        "Tools",
+        "Security"
+      ],
+      "description": "LLDAP is a simple front-end for managing users",
+      "image": "nitnelave/lldap:stable",
+      "hostname": "lldap",
+      "restart_policy": "unless-stopped",
+      "title": "LLDAP",
+      "type": 1,
+      "platform": "linux",
+      "network": "proxy",
+      "ports": [
+        "3890",
+        "17170"
+      ],
+      "volumes": [
+        {
+          "bind": "/home/tstark/pods/lldap/data",
+          "container": "/data"
+        }
+      ],
+      "env": [
+        {
+          "name": "UID",
+          "value": "1000"
+        },
+        {
+          "name": "GID",
+          "value": "1000"
+        },
+        {
+          "name": "TZ",
+          "value": "America/Los_Angeles"
+        },
+        {
+          "name": "LLDAP_JWT_SECRET",
+          "value": "secret"
+        },
+        {
+          "name": "LLDAP_LDAP_USER_PASS",
+          "value": "secret"
+        },
+        {
+          "name": "LLDAP_LDAP_BASE_DN",
+          "value": "dc=dum-e,dc=io"
         }
       ]
     }

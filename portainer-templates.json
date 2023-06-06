@@ -38,6 +38,9 @@
           "bind": "/var/run/docker.sock",
           "container": "/var/run/docker.sock"
         }
+      ],
+      "networks": [
+        "proxy"
       ]
     }
   ]

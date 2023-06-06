@@ -71,12 +71,6 @@
           "name": "TZ",
           "value": "America/Los_Angeles"
         }
-      ],
-      "labels": [
-        {
-          "name": "traefik.enable",
-          "value": "true"
-        }
       ]
     },
     {

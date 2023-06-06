@@ -20,37 +20,18 @@
       "restart_policy": "always",
       "title": "Traefik",
       "type": 1,
-      "env": [
-        {
-          "default": "/home/user/pods/traefik/traefik.yml",
-          "description": "The path to the static configuration file",
-          "label": "STATIC_CONFIG",
-          "name": "STATIC_CONFIG"
-        },
-        {
-          "default": "/home/user/pods/traefik/config",
-          "description": "The directory where the dynamic configuration is stored",
-          "label": "DYNAMIC_CONFIG_DIR",
-          "name": "DYNAMIC_CONFIG_DIR"
-        },
-        {
-          "default": "/home/user/pods/traefik/acme.json",
-          "description": "The path to acme.json file is stored",
-          "label": "ACME_CONFIG",
-          "name": "ACME_CONFIG"
-        }
-      ],
+      "container_name": "traefik",
       "volumes": [
         {
-          "bind": "${STATIC_CONFIG}",
+          "bind": "/home/tstark/pods/traefik/traefik.yml",
           "container": "/traefik.yml"
         },
         {
-          "bind": "${DYNAMIC_CONFIG_DIR}",
+          "bind": "/home/tstark/pods/traefik/config",
           "container": "/config"
         },
         {
-          "bind": "${ACME_CONFIG}",
+          "bind": "/home/tstark/pods/traefik/acme.json",
           "container": "/acme.json"
         }
       ]

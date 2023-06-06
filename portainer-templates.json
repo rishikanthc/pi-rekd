@@ -21,6 +21,7 @@
       "title": "Traefik",
       "type": 1,
       "container_name": "traefik",
+      "network": "proxy",
       "volumes": [
         {
           "bind": "/home/tstark/pods/traefik/traefik.yml",
@@ -38,9 +39,6 @@
           "bind": "/var/run/docker.sock",
           "container": "/var/run/docker.sock"
         }
-      ],
-      "networks": [
-        "proxy"
       ]
     }
   ]

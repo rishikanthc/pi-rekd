@@ -1,47 +1,45 @@
-[
-  {
-    "version": "3",
-    "templates": [
-      {
-        "categories": [
-          "Proxy",
-          "Tools",
-          "Security"
-        ],
-        "description": "Traefik is a reverse proxy manager",
-        "image": "traefik/traefik:latest",
-        "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/traefik.png",
-        "name": "traefik",
-        "platform": "linux",
-        "ports": [
-          "80:80/tcp",
-          "443:443/tcp",
-          "8080:8080/tcp"
-        ],
-        "restart_policy": "always",
-        "title": "Traefik",
-        "type": 1,
-        "env": [
-          {
-            "default": "/home/user/pods/traefik/traefik.yml",
-            "description": "The path to the static configuration file",
-            "label": "STATIC_CONFIG",
-            "name": "STATIC_CONFIG"
-          },
-          {
-            "default": "/home/user/pods/traefik/config",
-            "description": "The directory where the dynamic configuration is stored",
-            "label": "DYNAMIC_CONFIG_DIR",
-            "name": "DYNAMIC_CONFIG_DIR"
-          },
-          {
-            "default": "/home/user/pods/traefik/acme.json",
-            "description": "The path to acme.json file is stored",
-            "label": "ACME_CONFIG",
-            "name": "ACME_CONFIG"
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "version": "3",
+  "templates": [
+    {
+      "categories": [
+        "Proxy",
+        "Tools",
+        "Security"
+      ],
+      "description": "Traefik is a reverse proxy manager",
+      "image": "traefik/traefik:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/traefik.png",
+      "name": "traefik",
+      "platform": "linux",
+      "ports": [
+        "80:80/tcp",
+        "443:443/tcp",
+        "8080:8080/tcp"
+      ],
+      "restart_policy": "always",
+      "title": "Traefik",
+      "type": 1,
+      "env": [
+        {
+          "default": "/home/user/pods/traefik/traefik.yml",
+          "description": "The path to the static configuration file",
+          "label": "STATIC_CONFIG",
+          "name": "STATIC_CONFIG"
+        },
+        {
+          "default": "/home/user/pods/traefik/config",
+          "description": "The directory where the dynamic configuration is stored",
+          "label": "DYNAMIC_CONFIG_DIR",
+          "name": "DYNAMIC_CONFIG_DIR"
+        },
+        {
+          "default": "/home/user/pods/traefik/acme.json",
+          "description": "The path to acme.json file is stored",
+          "label": "ACME_CONFIG",
+          "name": "ACME_CONFIG"
+        }
+      ]
+    }
+  ]
+}

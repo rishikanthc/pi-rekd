@@ -20,7 +20,7 @@
       "restart_policy": "always",
       "title": "Traefik",
       "type": 1,
-      "container_name": "traefik",
+      "hostname": "traefik",
       "network": "proxy",
       "volumes": [
         {
@@ -38,6 +38,64 @@
         {
           "bind": "/var/run/docker.sock",
           "container": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Authentication",
+        "Tools",
+        "Security"
+      ],
+      "description": "Authelia is an authentication provider",
+      "image": "docker.io/authelia/authelia:latest",
+      "hostname": "authelia",
+      "restart_policy": "unless-stopped",
+      "title": "Authelia",
+      "type": 1,
+      "platform": "linux",
+      "network": "proxy",
+      "volumes": [
+        {
+          "bind": "/home/tstark/pods/authelia/config",
+          "container": "/config"
+        }
+      ],
+      "ports": [
+        "9091"
+      ],
+      "env": [
+        {
+          "name": "TZ",
+          "value": "America/Los_Angeles"
+        }
+      ],
+      "labels": [
+        {
+          "name": "traefik.enable",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Database",
+        "Tools"
+      ],
+      "description": "Redis",
+      "image": "redis:alpine",
+      "hostname": "redis",
+      "restart_policy": "unless-stopped",
+      "title": "Redis",
+      "type": 1,
+      "platform": "linux",
+      "ports": [
+        "6379"
+      ],
+      "env": [
+        {
+          "name": "TZ",
+          "value": "America/Los_Angeles"
         }
       ]
     }

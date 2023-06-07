@@ -179,6 +179,40 @@
           "container": "/opt/adguardhome/conf"
         }
       ]
+    },
+    {
+      "categories": [
+        "Utilities",
+      ],
+      "description": "Linkding is a self hosted bookmark manager",
+      "image": "sissbruecker/linkding:latest",
+      "name": "linkding",
+      "hostname": "linkding",
+      "restart_policy": "unless-stopped",
+      "title": "Linkding",
+      "type": 1,
+      "platform": "linux",
+      "network": "proxy",
+      "ports": [
+        "9090/tcp"
+      ],
+      "volumes": [
+        {
+          "bind": "/home/tstark/pods/linkding/data",
+          "container": "/etc/linkding/data"
+        }
+      ],
+      "env": [
+        {
+          "name": "LD_ENABLE_AUTH_PROXY",
+          "default": "True"
+        },
+        {
+          "name": "LD_AUTH_PROXY_USERNAME_HEADER",
+          "description": "Select the http header to use as identification from reverse proxy redirect",
+          "default": "HTTP_REMOTE_USER"
+        }
+      ]
     }
   ]
 }

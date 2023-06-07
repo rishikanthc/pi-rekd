@@ -230,41 +230,29 @@
       },
       "env": [
         {
-          "name": "OAUTH2_PROVIDER",
+          "name": "AUTH_PROVIDER",
           "default": "oidc",
           "description": "OAuth2 provider to use for authentication"
         },
         {
-          "name": "OAUTH2_OIDC_DISCOVERY_URL",
+          "name": "DISCOVERY_URL",
           "default": "https://auth.inator.dum-e.io/.well-known/openid-configuration",
           "description": "OpenID Connect discovery URL"
         },
         {
-          "name": "OAUTH2_REDIRECT_URL",
+          "name": "REDIRECT_URL",
           "description": "OAuth2 redirect URL - url to return to after authentication",
           "default": "https://miniflux.inator.dum-e.io/oauth2/callback"
         },
         {
-          "name": "OAUTH2_CLIENT_ID",
+          "name": "CLIENT_ID",
           "description": "OAuth2 client ID",
           "default": "miniflux"
         },
         {
-          "name": "OAUTH2_CLIENT_SECRET",
+          "name": "CLIENT_SECRET",
           "description": "OAuth2 client secret",
           "default": "secret"
-        },
-        {
-          "name": "DBURL",
-          "description": "Database URL",
-          "default": "postgres://miniflux:secret@db/miniflux?sslmode=disable",
-          "preset": true
-        },
-        {
-          "name": "RUN_MIGRATIONS",
-          "description": "Run migrations on startup",
-          "default": "1",
-          "preset": true
         }
       ]
     }

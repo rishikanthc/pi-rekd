@@ -155,7 +155,7 @@
       ],
       "description": "AdGuard Home is a DNS sinkhole",
       "image": "adguard/adguardhome:latest",
-      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/authelia.svg",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/authelia.png",
       "hostname": "adguard",
       "restart_policy": "always",
       "title": "AdGuard Home",

@@ -48,7 +48,7 @@
         "Security"
       ],
       "description": "Authelia is an authentication provider",
-      "image": "docker.io/authelia/authelia:latest",
+      "image": "docker.io/authelia/authelia:master",
       "name": "authelia",
       "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/authelia.png",
       "hostname": "authelia",
@@ -186,6 +186,7 @@
       ],
       "description": "Linkding is a self hosted bookmark manager",
       "image": "sissbruecker/linkding:latest",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/linkding.png",
       "name": "linkding",
       "hostname": "linkding",
       "restart_policy": "unless-stopped",

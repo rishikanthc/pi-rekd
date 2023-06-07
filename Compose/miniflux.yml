@@ -9,6 +9,7 @@ services:
     environment:
       - DATABASE_URL=postgres://miniflux:secret@db/miniflux?sslmode=disable
       - RUN_MIGRATIONS=1
+      - BASE_URL=${BASE_URL}
       - OAUTH2_PROVIDER=${AUTH_PROVIDER}
       - OAUTH2_CLIENT_ID=${CLIENT_ID}
       - OAUTH2_CLIENT_SECRET=${CLIENT_SECRET}

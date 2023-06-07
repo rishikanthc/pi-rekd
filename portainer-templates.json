@@ -262,6 +262,45 @@
           "default": "secret"
         }
       ]
+    },
+    {
+      "categories": [
+        "Utilities",
+        "Dashboard"
+      ],
+      "description": "Dashy is a highly configurable dashboard for all your web applications",
+      "image": "lissy93/dashy:latest",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/dashy.png",
+      "name": "dashy",
+      "hostname": "dashy",
+      "restart_policy": "unless-stopped",
+      "title": "Dashy",
+      "type": 1,
+      "platform": "linux",
+      "network": "proxy",
+      "ports": [
+        "4000:80/tcp"
+      ],
+      "volumes": [
+        {
+          "bind": "/home/tstark/pods/dashy/config.yml",
+          "container": "/app/public/conf.yml"
+        }
+      ],
+      "env": [
+        {
+          "name": "NODE_ENV",
+          "default": "production"
+        },
+        {
+          "name": "UID",
+          "value": "1000"
+        },
+        {
+          "name": "GID",
+          "value": "1000"
+        }
+      ]
     }
   ]
 }

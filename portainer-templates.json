@@ -255,7 +255,7 @@
           "default": "secret"
         },
         {
-          "name": "DATABASE_URL",
+          "name": "DBURL",
           "description": "Database URL",
           "default": "postgres://miniflux:secret@db/miniflux?sslmode=disable",
           "preset": true

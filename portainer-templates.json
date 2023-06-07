@@ -48,7 +48,7 @@
         "Security"
       ],
       "description": "Authelia is an authentication provider",
-      "image": "docker.io/authelia/authelia:master",
+      "image": "docker.io/authelia/authelia:latest",
       "name": "authelia",
       "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/authelia.png",
       "hostname": "authelia",

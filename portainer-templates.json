@@ -218,6 +218,7 @@
     {
       "type": 3,
       "title": "Miniflux",
+      "name": "miniflux",
       "description": "Miniflux is a minimalist RSS reader",
       "categories": [
         "Utilities"

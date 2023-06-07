@@ -242,7 +242,7 @@
         {
           "name": "REDIRECT_URL",
           "description": "OAuth2 redirect URL - url to return to after authentication",
-          "default": "https://miniflux.inator.dum-e.io/oauth2/callback"
+          "default": "https://feeds.dum-e.io/oauth2/oidc/callback"
         },
         {
           "name": "CLIENT_ID",

@@ -220,6 +220,7 @@
       "title": "Miniflux",
       "name": "miniflux",
       "description": "Miniflux is a minimalist RSS reader",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/miniflux.png",
       "categories": [
         "Utilities"
       ],

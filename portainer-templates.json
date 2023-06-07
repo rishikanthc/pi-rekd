@@ -253,6 +253,16 @@
           "name": "OAUTH2_CLIENT_SECRET",
           "description": "OAuth2 client secret",
           "default": "secret"
+        },
+        {
+          "name": "DATABASE_URL",
+          "description": "Database URL",
+          "default": "postgres://miniflux:secret@db/miniflux?sslmode=disable"
+        },
+        {
+          "name": "RUN_MIGRATIONS",
+          "description": "Run migrations on startup",
+          "default": "1"
         }
       ]
     }

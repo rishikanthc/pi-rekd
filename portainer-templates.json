@@ -182,7 +182,7 @@
     },
     {
       "categories": [
-        "Utilities",
+        "Utilities"
       ],
       "description": "Linkding is a self hosted bookmark manager",
       "image": "sissbruecker/linkding:latest",
@@ -205,6 +205,7 @@
       "env": [
         {
           "name": "LD_ENABLE_AUTH_PROXY",
+          "description": "Enable authentication via reverse proxy",
           "default": "True"
         },
         {

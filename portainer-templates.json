@@ -233,7 +233,7 @@
           "name": "BASE_URL",
           "description": "Base URL of the Miniflux instance",
           "default": "https://feeds.dum-e.io"
-        }
+        },
         {
           "name": "AUTH_PROVIDER",
           "default": "oidc",

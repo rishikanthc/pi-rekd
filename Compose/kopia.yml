@@ -28,9 +28,9 @@ services:
         - /home/tstark/pods/kopia/logs:/app/logs
         - /:/data:ro
       environment:
-        USER: ${KOPIA_USER}
-        TZ: ${TZ}
         KOPIA_PASSWORD: ${REPO_PASSWORD}
+        TZ: ${TZ}
+        USER: ${KOPIA_USER}
 
 networks:
   proxy:

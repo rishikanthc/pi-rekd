@@ -412,7 +412,7 @@
         {
           "name": "ALT_RD",
           "description": "Alternative Reddit front end",
-          "default": "farside.link/libreddit"
+          "default": "teddit.dum-e.io"
         },
         {
           "name": "ALT_TW",

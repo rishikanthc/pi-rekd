@@ -349,6 +349,22 @@
           "default": "teddit.dum-e.io"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "RPi System Monitor",
+      "name": "rpi-monitor",
+      "description": "A Grafana Prometheus stack to monitor your Raspberry Pi",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/rpi-monitor.png",
+      "categories": [
+        "Utilities",
+        "System"
+      ],
+      "platform": "linux",
+      "repository": {
+        "url": "https://github.com/rishikanthc/pi-rekd",
+        "stackfile": "Compose/rpi-monitoring.yml"
+      }
     }
   ]
 }

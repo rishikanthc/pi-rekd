@@ -365,6 +365,21 @@
         "url": "https://github.com/rishikanthc/pi-rekd",
         "stackfile": "Compose/rpi-monitoring.yml"
       }
+    },
+    {
+      "type": 3,
+      "title": "Invidious",
+      "name": "invidious",
+      "description": "An alternative front end for YouTube",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/invidious.png",
+      "categories": [
+        "Media"
+      ],
+      "platform": "linux",
+      "repository": {
+        "url": "https://github.com/rishikanthc/pi-rekd",
+        "stackfile": "Compose/invidious.yml"
+      }
     }
   ]
 }

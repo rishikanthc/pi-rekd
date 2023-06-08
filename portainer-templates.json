@@ -379,7 +379,14 @@
       "repository": {
         "url": "https://github.com/rishikanthc/pi-rekd",
         "stackfile": "Compose/invidious.yml"
-      }
+      },
+      "env": [
+        {
+          "name": "INVIDIOUS_DOMAIN",
+          "description": "domain of the Invidious instance",
+          "default": "utube.dum-e.io"
+        }
+      ]
     }
   ]
 }

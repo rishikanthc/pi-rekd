@@ -23,7 +23,7 @@ services:
           port: 5432
         check_tables: true
         # external_port:
-        domain: utube.dum-e.io
+        domain: ${INVIDIOUS_DOMAIN}
         # https_only: false
         statistics_enabled: false
     healthcheck:

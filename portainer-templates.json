@@ -297,6 +297,36 @@
           "default": "production"
         }
       ]
+    },
+    {
+      "categories": [
+        "Utilities",
+        "Dashboard"
+      ],
+      "description": "Homepage is a way to organise all those links to your most used web sites and web applications in a simple way",
+      "image": "ghcr.io/benphelps/homepage:latest",
+      "container_name": "homepage",
+      "name": "homepage",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/homepage.png",
+      "hostname": "homepage",
+      "restart_policy": "unless-stopped",
+      "title": "Homepage",
+      "type": 1,
+      "platform": "linux",
+      "network": "proxy",
+      "ports": [
+        "3000:3000/tcp"
+      ],
+      "volumes": [
+        {
+          "bind": "/home/tstark/pods/homepage",
+          "container": "/app/config"
+        },
+        {
+          "bind": "/var/run/docker.sock",
+          "container": "/var/run/docker.sock:ro"
+        }
+      ]
     }
   ]
 }

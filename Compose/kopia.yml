@@ -17,7 +17,7 @@ services:
         - server
         - start
         - --disable-csrf-token-checks
-        - --address=0.0.0.0:51515
+        - --address=127.0.0.1:51515
         - --server-username=admin
         - --server-password=c08ac866cbc316b29a25f41475a4e13f
       volumes:

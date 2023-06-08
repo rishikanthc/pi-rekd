@@ -64,7 +64,7 @@
         }
       ],
       "ports": [
-        "9091/tcp"
+        "127.0.0.1:9091:9091/tcp"
       ],
       "env": [
         {
@@ -87,7 +87,7 @@
       "type": 1,
       "platform": "linux",
       "ports": [
-        "6379/tcp"
+        "127.0.0.1:6379:6379/tcp"
       ],
       "network": "proxy",
       "volumes": [
@@ -167,7 +167,7 @@
         "53:53/tcp",
         "53:53/udp",
         "853:853/tcp",
-        "3000:3000/tcp"
+        "127.0.0.1:3000:3000/tcp"
       ],
       "volumes": [
         {
@@ -195,7 +195,7 @@
       "platform": "linux",
       "network": "proxy",
       "ports": [
-        "9090/tcp"
+        "127.0.0.1:9090:9090/tcp"
       ],
       "volumes": [
         {
@@ -279,7 +279,7 @@
       "platform": "linux",
       "network": "proxy",
       "ports": [
-        "4000:80/tcp"
+        "127.0.0.1:4000:80/tcp"
       ],
       "volumes": [
         {
@@ -315,7 +315,7 @@
       "platform": "linux",
       "network": "proxy",
       "ports": [
-        "3001:3000/tcp"
+        "127.0.0.1:3001:3000/tcp"
       ],
       "volumes": [
         {

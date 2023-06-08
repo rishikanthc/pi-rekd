@@ -327,6 +327,28 @@
           "container": "/var/run/docker.sock:ro"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "Teddit",
+      "name": "teddit",
+      "description": "An open source alternative front end for Reddit",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/teddit.png",
+      "categories": [
+        "Social"
+      ],
+      "platform": "linux",
+      "repository": {
+        "url": "https://github.com/rishikanthc/pi-rekd",
+        "stackfile": "Compose/teddit.yml"
+      },
+      "env": [
+        {
+          "name": "BASE_URL",
+          "description": "Base URL of the Teddit instance",
+          "default": "https://teddit.dum-e.io"
+        }
+      ]
     }
   ]
 }

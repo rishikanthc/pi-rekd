@@ -387,6 +387,48 @@
           "default": "utube.dum-e.io"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "Whoogle",
+      "name": "whoogle",
+      "description": "A self-hosted, ad-free, privacy-respecting front end to Google",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/whoogle.png",
+      "categories": [
+        "Utilities",
+        "Search"
+      ],
+      "platform": "linux",
+      "repository": {
+        "url": "https://github.com/rishikanthc/pi-rekd",
+        "stackfile": "Compose/whoogle.yml"
+      },
+      "env": [
+        {
+          "name": "ALT_YT",
+          "description": "Alternative YouTube front end",
+          "default": "farside.link/invidious"
+        },
+        {
+          "name": "ALT_RD",
+          "description": "Alternative Reddit front end",
+          "default": "farside.link/libreddit"
+        },
+        {
+          "name": "ALT_TW",
+          "description": "Alternative Twitter front end",
+          "default": "farside.link/nitter"
+        },
+        {
+          "name": "ALT_TL",
+          "description": "Alternative Google Translate front end",
+          "default": "farside.link/lingva"
+        },
+        {
+          "name": "ALT_MD",
+          "default": "farside.link/scribe"
+        }
+      ]
     }
   ]
 }

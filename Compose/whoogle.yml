@@ -12,6 +12,8 @@ services:
     memswap_limit: 256mb
     # user debian-tor from tor package
     user: whoogle
+    networks:
+      - proxy
     security_opt:
       - no-new-privileges
     cap_drop:
@@ -46,3 +48,7 @@ services:
       #- whoogle.env
     ports:
       - 5000:5000
+
+networks:
+  proxy:
+    external: true

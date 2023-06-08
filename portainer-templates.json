@@ -285,6 +285,10 @@
         {
           "bind": "/home/tstark/pods/dashy/config.yml",
           "container": "/app/public/conf.yml"
+        },
+        {
+          "bind": "/home/tstark/pods/dashy/mytheme.scss",
+          "container": "/app/src/styles/user-defined-themes.scss"
         }
       ],
       "env": [

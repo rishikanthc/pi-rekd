@@ -11,6 +11,8 @@ services:
         - apparmor:unconfined
       devices:
         - /dev/fuse:/dev/fuse:rwm
+      networks:
+        - proxy
       command:
         - server
         - start
@@ -28,3 +30,7 @@ services:
         KOPIA_PASSWORD: ${KOPIA_PASSWORD}
         TZ: ${TZ}
         USER: ${KOPIA_USER}
+
+networks:
+  proxy:
+    external: true

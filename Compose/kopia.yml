@@ -28,9 +28,9 @@ services:
         - /home/tstark/pods/kopia/logs:/app/logs
         - /:/data:ro
       environment:
-        - USER: ${KOPIA_USER}
-        - TZ: ${TZ}
-        - KOPIA_PASSWORD: 62135f6a28b1b834fc076f8f7fc0b162
+        USER: ${KOPIA_USER}
+        TZ: ${TZ}
+        KOPIA_PASSWORD: 62135f6a28b1b834fc076f8f7fc0b162
 
 networks:
   proxy:

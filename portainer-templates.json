@@ -344,9 +344,9 @@
       },
       "env": [
         {
-          "name": "BASE_URL",
+          "name": "TEDDIT_DOMAIN",
           "description": "Base URL of the Teddit instance",
-          "default": "https://teddit.dum-e.io"
+          "default": "teddit.dum-e.io"
         }
       ]
     }

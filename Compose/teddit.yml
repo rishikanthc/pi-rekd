@@ -5,7 +5,7 @@ services:
     container_name: teddit
     image: teddit/teddit:latest
     environment:
-      - DOMAIN=${BASE_URL}
+      - DOMAIN=${TEDDIT_DOMAIN}
       - USE_HELMET=true
       - USE_HELMET_HSTS=true
       - TRUST_PROXY=true

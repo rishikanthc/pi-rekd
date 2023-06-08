@@ -429,6 +429,39 @@
           "default": "farside.link/scribe"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "Kopia",
+      "name": "kopia",
+      "description": "A backup management tool",
+      "logo": "https://raw.githubusercontent.com/rishikanthc/pi-rekd/main/logos/kopia.png",
+      "categories": [
+        "System",
+        "Backup"
+      ],
+      "platform": "linux",
+      "repository": {
+        "url": "https://github.com/rishikanthc/pi-rekd",
+        "stackfile": "Compose/kopia.yml"
+      },
+      "env": [
+        {
+          "name": "KOPIA_USER",
+          "description": "Username for Kopia",
+          "default": "admin"
+        },
+        {
+          "name": "KOPIA_PASSWORD",
+          "description": "Password for Kopia",
+          "default": "admin"
+        },
+        {
+          "name": "TZ",
+          "description": "Timezone",
+          "default": "America/Los_Angeles"
+        }
+      ]
     }
   ]
 }

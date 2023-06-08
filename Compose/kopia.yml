@@ -1,0 +1,30 @@
+services:
+  kopia:
+      image: kopia/kopia:latest
+      container_name: Kopia
+      user: "0:0"
+      restart: "unless-stopped"
+      privileged: true
+      cap_add:
+        - SYS_ADMIN
+      security_opt:
+        - apparmor:unconfined
+      devices:
+        - /dev/fuse:/dev/fuse:rwm
+      command:
+        - server
+        - start
+        - --disable-csrf-token-checks
+        - --address=0.0.0.0:51515
+        - --server-username=admin
+        - --server-password=c08ac866cbc316b29a25f41475a4e13f
+      volumes:
+        - /mnt/kopia:/tmp:shared
+        - /home/tstark/pods/kopia/config:/app/config
+        - /home/tstark/pods/kopia/cache:/app/cache
+        - /home/tstark/pods/kopia/logs:/app/logs
+        - /:/data:ro
+      environment:
+        KOPIA_PASSWORD: ${KOPIA_PASSWORD}
+        TZ: ${TZ}
+        USER: ${KOPIA_USER}

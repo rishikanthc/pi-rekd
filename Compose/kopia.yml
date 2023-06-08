@@ -30,7 +30,7 @@ services:
       environment:
         USER: ${KOPIA_USER}
         TZ: ${TZ}
-        KOPIA_PASSWORD: 62135f6a28b1b834fc076f8f7fc0b162
+        KOPIA_PASSWORD: ${REPO_PASSWORD}
 
 networks:
   proxy:

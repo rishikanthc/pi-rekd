@@ -460,6 +460,11 @@
           "name": "TZ",
           "description": "Timezone",
           "default": "America/Los_Angeles"
+        },
+        {
+          "name": "REPO_PASSWORD",
+          "description": "Password for Kopia repository",
+          "default": "password"
         }
       ]
     }

@@ -92,5 +92,7 @@ services:
       - node-exporter:node-exporter
 
 networks:
+  proxy:
+    external: true
   internal:
     driver: bridge

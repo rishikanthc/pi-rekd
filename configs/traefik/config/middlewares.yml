@@ -1,0 +1,55 @@
+http:
+  middlewares:
+    rate-limit:
+      rateLimit:
+        average: 100
+        burst: 50
+
+    authelia:
+      forwardAuth:
+        address: "http://authelia:9091/api/verify?rd=https://auth.inator.dum-e.io"
+        trustForwardHeader: true
+        authResponseHeaders:
+          - "Remote-User"
+          - "Remote-Groups"
+          - "Remote-Email"
+          - "Remote-Name"
+
+    authelia-basic:
+      forwardAuth:
+        address: "http://authelia:9091/api/verify?auth=basic"
+        trustForwardHeader: true
+        authResponseHeaders:
+          - "Remote-User"
+          - "Remote-Groups"
+          - "Remote-Email"
+          - "Remote-Name"
+
+    security-headers:
+      headers:
+        accessControlAllowMethods:
+          - GET
+          - OPTIONS
+          - PUT
+        accessControlAllowHeaders: "*"
+        accessControlAllowOriginList: "*"
+        accessControlMaxAge: 100
+        addVaryHeader: true
+        hostsProxyHeaders: X-Forwarded-Host
+        sslRedirect: true
+        sslProxyHeaders:
+          X-Forwarded-Proto: https
+        stsSeconds: 63072000
+        stsIncludeSubdomains: true
+        stsPreload: true
+        forceSTSHeader: true
+        frameDeny: true
+        contentTypeNosniff: true
+        browserXssFilter: true
+        referrerPolicy: same-origin
+
+    secured:
+      chain:
+        middlewares:
+          - security-headers
+          - authelia-basic

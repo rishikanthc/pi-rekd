@@ -1,0 +1,19 @@
+---
+###############################################################
+#                         Users Database                      #
+###############################################################
+
+# This file can be used if you do not have an LDAP set up.
+
+# List of users
+users:
+  tstark:
+    disabled: false
+    displayname: "Tony Stark"
+    # Password is authelia
+    password: "$argon2id$v=19$m=65536,t=3,p=4$bVVGSVBqTVVSb0RobWhSbw$Xt4aGS/d+B0s33KQvwnHP3tlu+RH+9Z1p89mNE33NhU"  # yamllint disable-line rule:line-length
+    email: rcnoetic@gmail.com
+    groups:
+      - admins
+      - dev
+...

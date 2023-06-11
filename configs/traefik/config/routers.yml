@@ -1,0 +1,147 @@
+http:
+  routers:
+    kopia:
+      entrypoints: "websecure"
+      rule: "Host(`backups.dum-e.io`)"
+      middlewares: "authelia"
+      service: "kopia"
+      tls:
+        certResolver: "letsencrypt"
+
+    whoogle:
+      entrypoints: "websecure"
+      rule: "Host(`search.dum-e.io`)"
+      service: "whoogle"
+      tls:
+        certResolver: "letsencrypt"
+
+    invidious:
+      entrypoints: "websecure"
+      rule: "Host(`utube.dum-e.io`)"
+      service: "invidious"
+      middlewares: "authelia"
+      tls:
+        certResolver: "letsencrypt"
+
+    rpi-monitor:
+      entrypoints: "websecure"
+      rule: "Host(`observe.inator.dum-e.io`)"
+      service: "rpi-monitor"
+      tls:
+        certResolver: "letsencrypt"
+
+    dash:
+      entrypoints: "websecure"
+      rule: "Host(`dash.inator.dum-e.io`)"
+      middlewares: "authelia-basic"
+      service: "dash"
+      tls:
+        certResolver: "letsencrypt"
+
+    teddit:
+      entrypoints: "websecure"
+      rule: "Host(`teddit.dum-e.io`)"
+      middlewares: "authelia"
+      service: "teddit"
+      tls:
+        certResolver: "letsencrypt"
+
+    api:
+      entrypoints: "websecure"
+      rule: "Host(`proxy.inator.dum-e.io`)"
+      service: "api@internal"
+      tls:
+        certResolver: "letsencrypt"
+
+    portainer:
+      entrypoints: "websecure"
+      rule: "Host(`pods.inator.dum-e.io`)"
+      service: "portainer"
+      tls:
+        certResolver: "letsencrypt"
+
+    miniflux:
+      entrypoints: "websecure"
+      rule: "Host(`feeds.dum-e.io`)"
+      middlewares: "security-headers"
+      service: "miniflux"
+      tls:
+        certResolver: "letsencrypt"
+
+    linkding:
+      entrypoints: "websecure"
+      rule: "Host(`links.dum-e.io`)"
+      middlewares: "authelia"
+      service: "linkding"
+      tls:
+        certResolver: "letsencrypt"
+
+    authelia:
+      entrypoints: "websecure"
+      rule: "Host(`auth.inator.dum-e.io`)"
+      service: "authelia"
+      tls:
+        certResolver: "letsencrypt"
+
+    adguard:
+      entrypoints: "websecure"
+      rule: "Host(`adblock.inator.dum-e.io`)"
+      service: "adguard"
+      tls:
+        certResolver: "letsencrypt"
+
+  services:
+    portainer:
+      loadBalancer:
+        servers:
+          - url: "http://portainer:9000"
+
+    authelia:
+      loadBalancer:
+        servers:
+          - url: "http://authelia:9091"
+
+    adguard:
+      loadBalancer:
+        servers:
+          - url: "http://172.18.0.6"
+
+    miniflux:
+      loadBalancer:
+        servers:
+          - url: "http://miniflux-miniflux-1:8080"
+
+    linkding:
+      loadBalancer:
+        servers:
+          - url: "http://linkding:9090"
+
+    dash:
+      loadBalancer:
+        servers:
+          - url: "http://homepage:3000"
+
+    teddit:
+      loadBalancer:
+        servers:
+          - url: "http://teddit:8080"
+
+    rpi-monitor:
+      loadBalancer:
+        servers:
+          - url: "http://monitoring-grafana:3000"
+
+    invidious:
+      loadBalancer:
+        servers:
+          - url: "http://invidious:3000"
+
+    whoogle:
+      loadBalancer:
+        servers:
+          - url: "http://whoogle-search:5000"
+
+    kopia:
+      loadBalancer:
+        servers:
+          - url: "http://Kopia:51515"

@@ -1,0 +1,31 @@
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      redirections:
+        entrypoint:
+          to: "websecure"
+          scheme: "https"
+  websecure:
+    address: ":443"
+
+api:
+  dashboard: true
+  debug: true
+  insecure: false
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: "proxy"
+    watch: true
+  file:
+    directory: "/config"
+    watch: true
+
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      email: "rcnoetic@gmail.com"
+      storage: "acme.json"
+      tlsChallenge: {}

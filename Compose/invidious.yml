@@ -46,9 +46,9 @@ services:
     networks:
       - default
     volumes:
-      - postgresdata:/var/lib/postgresql/data
-      - ./config/sql:/config/sql
-      - ./docker/init-invidious-db.sh:/docker-entrypoint-initdb.d/init-invidious-db.sh
+      - /home/tstark/pods/data/invidious:/var/lib/postgresql/data
+      - /home/tstark/pods/config/invidious/sql:/config/sql
+      - /home/tstark/pods/config/invidious/init-invidious-db.sh:/docker-entrypoint-initdb.d/init-invidious-db.sh
     environment:
       POSTGRES_DB: invidious
       POSTGRES_USER: kemal

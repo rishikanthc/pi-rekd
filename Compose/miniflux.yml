@@ -25,7 +25,7 @@ services:
       - POSTGRES_USER=miniflux
       - POSTGRES_PASSWORD=secret
     volumes:
-      - /home/tstark/pods/miniflux/db:/var/lib/postgresql/data
+      - /home/tstark/pods/data/miniflux/db:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "miniflux"]
       interval: 10s

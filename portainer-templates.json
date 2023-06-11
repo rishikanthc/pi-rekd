@@ -24,15 +24,15 @@
       "network": "proxy",
       "volumes": [
         {
-          "bind": "/home/tstark/pods/traefik/traefik.yml",
+          "bind": "/home/tstark/pods/config/traefik/traefik.yml",
           "container": "/traefik.yml"
         },
         {
-          "bind": "/home/tstark/pods/traefik/config",
+          "bind": "/home/tstark/pods/config/traefik/config",
           "container": "/config"
         },
         {
-          "bind": "/home/tstark/pods/traefik/acme.json",
+          "bind": "/home/tstark/pods/data/traefik/acme.json",
           "container": "/acme.json"
         },
         {
@@ -59,7 +59,7 @@
       "network": "proxy",
       "volumes": [
         {
-          "bind": "/home/tstark/pods/authelia/config",
+          "bind": "/home/tstark/pods/config/authelia/config",
           "container": "/config"
         }
       ],
@@ -92,7 +92,7 @@
       "network": "proxy",
       "volumes": [
         {
-          "bind": "/home/tstark/pods/redis/data",
+          "bind": "/home/tstark/pods/data/redis/data",
           "container": "/data"
         }
       ]
@@ -170,11 +170,11 @@
       ],
       "volumes": [
         {
-          "bind": "/home/tstark/pods/adguard/work",
+          "bind": "/home/tstark/pods/data/adguard",
           "container": "/opt/adguardhome/work"
         },
         {
-          "bind": "/home/tstark/pods/adguard/conf",
+          "bind": "/home/tstark/pods/config/adguard",
           "container": "/opt/adguardhome/conf"
         }
       ]
@@ -198,7 +198,7 @@
       ],
       "volumes": [
         {
-          "bind": "/home/tstark/pods/linkding/data",
+          "bind": "/home/tstark/pods/data/linkding/data",
           "container": "/etc/linkding/data"
         }
       ],
@@ -282,11 +282,11 @@
       ],
       "volumes": [
         {
-          "bind": "/home/tstark/pods/dashy/config.yml",
+          "bind": "/home/tstark/pods/config/dashy/config.yml",
           "container": "/app/public/conf.yml"
         },
         {
-          "bind": "/home/tstark/pods/dashy/mytheme.scss",
+          "bind": "/home/tstark/pods/config/dashy/mytheme.scss",
           "container": "/app/src/styles/user-defined-themes.scss"
         }
       ],
@@ -318,7 +318,7 @@
       ],
       "volumes": [
         {
-          "bind": "/home/tstark/pods/homepage",
+          "bind": "/home/tstark/pods/config/homepage",
           "container": "/app/config"
         },
         {

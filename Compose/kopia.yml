@@ -23,9 +23,9 @@ services:
         - --server-password=${KOPIA_PASSWORD}
       volumes:
         - /mnt/kopia:/tmp:shared
-        - /home/tstark/pods/kopia/config:/app/config
-        - /home/tstark/pods/kopia/cache:/app/cache
-        - /home/tstark/pods/kopia/logs:/app/logs
+        - /home/tstark/pods/config/kopia:/app/config
+        - /home/tstark/pods/data/kopia/cache:/app/cache
+        - /home/tstark/pods/data/kopia/logs:/app/logs
         - /:/data:ro
       environment:
         KOPIA_PASSWORD: ${REPO_PASSWORD}
